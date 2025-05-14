@@ -29,16 +29,23 @@ def getDictTree(self):
 
  return self.dict_tree
 
-def Construct_AVL(L):
+def Construct_AVL(L,N):
 
   tree = AVL(L)
   
-  print(getDictTree(tree))
-
-L=[12,8,18,5,11,17,4,7,2]
+  for i in N:
+  
+      tree.insertNode(i)
+      
+  print("AVL Tree Before Balancing\n",getDictTree(tree))
+  
+  tree.BalanceTree()
+  
+  print("AVL Tree After Balancing\n",getDictTree(tree))
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/6b4b6bd3-a1ae-486a-b28c-86a744ce336e)
+![image](https://github.com/user-attachments/assets/c0a2e0dc-3593-43e0-8e34-cba72034cfef)![image](https://github.com/user-attachments/assets/2095910d-1585-49f6-aa79-90ec5eda980b)
+
 
 ## RESULT
 Thus, a Python program to construct an **AVL tree**, was implemented successfully.
